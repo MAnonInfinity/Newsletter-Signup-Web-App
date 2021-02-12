@@ -40,10 +40,10 @@ app.post("/", function(req, res){
 
   const jsonData = JSON.stringify(data);
 
-  const url = "https://us7.api.mailchimp.com/3.0/lists/2554cf5e43"
+  const url = "https://us7.api.mailchimp.com/3.0/lists/AUDIENCE_ID"
   const options = {
     method: "POST",
-    auth: "manon:547b086098d3962dbbe37753c4b3321e-us7"
+    auth: "manon:API_KEY"
   }
   const request = https.request(url, options, function(response){
     console.log(response.statusCode);
@@ -69,5 +69,5 @@ app.post("/failure", function(req, res){
   res.redirect("/");
 });
 
-// API Key = 547b086098d3962dbbe37753c4b3321e-us7
-// Audience ID = 2554cf5e43
+// API Key = API_KEY
+// Audience ID = AUDIENCE_ID
